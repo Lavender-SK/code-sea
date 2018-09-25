@@ -62,10 +62,6 @@ Sample Output:
         81.00
 """
 
-from collections import namedtuple
-N = int(input())
-student_columns_name = input().split()
-StudentMarks = namedtuple("StudentMarks", ','.join(input().split()))
-for i in N:
-    
+stu, marks = int(input()), input().split().index("MARKS")
+print (sum([int(input().split()[marks]) for _ in range(stu)]) / stu)
 
